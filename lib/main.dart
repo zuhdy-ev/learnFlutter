@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-  home: Scaffold(
+void main() => runApp(const MaterialApp(
+  home: Home(),
+));
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
     appBar: AppBar(
       title: const Text(
-        "My First App",
+        "My First SuperApp",
         style: TextStyle(
           fontSize: 20.0,
           fontFamily: "Poppins-SemiBold",
@@ -35,5 +43,6 @@ void main() => runApp(MaterialApp(
         ),
       ),
     ),
-  )
-));
+  );
+  }
+}
