@@ -23,14 +23,17 @@ class Home extends StatelessWidget {
 
     ),
     body: const Center(
-      child: Text(
-        "Hello World",
-        style: TextStyle(
-          fontSize: 30.0,
-          fontFamily: "Poppins-SemiBold",
-          color: Colors.green,
-        ),
+      child: Image(
+        image: AssetImage("assets/Gojek_Logo_Brandmark.png"),
       ),
+      // Text(
+      //   "Hello World",
+      //   style: TextStyle(
+      //     fontSize: 30.0,
+      //     fontFamily: "Poppins-SemiBold",
+      //     color: Colors.green,
+      //   ),
+      // ),
     ),
     floatingActionButton: FloatingActionButton(
       onPressed: () {},
