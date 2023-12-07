@@ -12,111 +12,88 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Good Morning",
-          style: TextStyle(
-            fontSize: 20.0,
-            fontFamily: "Poppins-SemiBold",
+        title: const Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Text(
+            "My Profile",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 18.0,
+              fontFamily: "Poppins-SemiBold",
+            ),
           ),
         ),
-        backgroundColor: Colors.green[800],
+        backgroundColor: Colors.white70,
+        elevation: 0.0,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Colors.green[800],
-        child: const Text(
-          "Click",
-          style: TextStyle(
-            fontSize: 15.0,
-            fontFamily: "Poppins-SemiBold",
-          ),
+      body: const Padding(
+        padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              flex: 1,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 8.0, 0, 0),
+                child: CircleAvatar(
+                  radius: 22.0,
+                  backgroundImage: AssetImage("assets/Pict.png"),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 20.0,
+            ),
+            Expanded(
+              flex: 5,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Zuhdi Ardi",
+                      style: TextStyle(
+                        fontSize: 21.0,
+                        fontFamily: "Poppins-SemiBold",
+                      )),
+                  Text("ardhiekov@gmail.com",
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        fontFamily: "Poppins-Light",
+                      )),
+                  Text("628012341234",
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        fontFamily: "Poppins-Light",
+                      )),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.location_on,
+                        size: 15.0,
+                      ),
+                      Text("Yogyakarta",
+                          style: TextStyle(
+                            fontSize: 15.0,
+                            fontFamily: "Poppins-Light",
+                          )),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 2.0, 0, 0),
+                child: Icon(
+                  Icons.edit,
+                  size: 25.0,
+                  color: Color.fromARGB(221, 24, 21, 21),
+                ),
+              ),
+            )
+          ],
         ),
-      ),
-      body: Center(
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Container(
-                margin: const EdgeInsets.all(10.0),
-                padding: const EdgeInsets.all(50.0),
-                color: Colors.cyan[100],
-                child: const Text("One"),
-              ),
-              Container(
-                margin: const EdgeInsets.all(10.0),
-                padding: const EdgeInsets.all(50.0),
-                color: Colors.amber[100],
-                child: const Text("Two"),
-              ),
-              Container(
-                margin: const EdgeInsets.all(10.0),
-                padding: const EdgeInsets.all(50.0),
-                color: Colors.black38,
-                child: const Text("One"),
-              ),
-            ]),
       ),
     );
   }
 }
-
-/*
-  Row(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: <Widget>[
-      const Icon(Icons.account_balance_wallet_rounded,
-          size: 60.0, color: Colors.lightBlueAccent),
-      const Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text("Saldo",
-              style: TextStyle(
-                fontSize: 15.0,
-                fontFamily: "Poppins-SemiBold",
-              )),
-          Text("Rp1000.000,-",
-              style: TextStyle(
-                  fontSize: 15.0, fontFamily: "Poppins-SemiBold")),
-        ],
-      ),
-      Container(
-        color: Colors.cyan,
-        margin: const EdgeInsets.all(10.0),
-        padding: const EdgeInsets.all(10.0),
-        child: const Text(
-          "Top Up",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 15.0,
-            fontFamily: "Poppins-SemiBold",
-          ),
-        ),
-      ),
-    ],
-  ),
-
-  ==========================
-
-  Container(
-  padding: const EdgeInsets.all(30.0),
-  color: Colors.white70,
-  child: const Column(children: [
-    Image(
-      image: AssetImage("assets/Gojek_Logo_Brandmark.png"),
-    ),
-    Text(
-      "Welcome",
-      style: TextStyle(
-        fontSize: 30.0,
-        fontFamily: "Poppins-SemiBold",
-        color: Colors.green,
-      ),
-    ),
-    Icon(
-      Icons.favorite,
-      color: Colors.red,
-      size: 30.0,
-    )
-  ])),
-*/
