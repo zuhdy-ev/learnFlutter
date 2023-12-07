@@ -13,7 +13,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Good Morning, Zuhdi!",
+          "Good Morning",
           style: TextStyle(
             fontSize: 20.0,
             fontFamily: "Poppins-SemiBold",
@@ -22,9 +22,7 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.green[800],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print("You Click Me");
-        },
+        onPressed: () {},
         backgroundColor: Colors.green[800],
         child: const Text(
           "Click",
@@ -34,84 +32,72 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      body: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const Icon(Icons.account_balance_wallet_rounded,
-              size: 60.0, color: Colors.lightBlueAccent),
-          const Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("Saldo",
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    fontFamily: "Poppins-SemiBold",
-                  )),
-              Text("Rp1000.000,-",
-                  style: TextStyle(
-                      fontSize: 15.0, fontFamily: "Poppins-SemiBold")),
-            ],
-          ),
-          Container(
-            color: Colors.cyan,
-            margin: const EdgeInsets.all(10.0),
-            padding: const EdgeInsets.all(10.0),
-            child: const Text(
-              "Top Up",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 15.0,
-                fontFamily: "Poppins-SemiBold",
+      body: Center(
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Container(
+                margin: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(50.0),
+                color: Colors.cyan[100],
+                child: const Text("One"),
               ),
-            ),
-          ),
-        ],
+              Container(
+                margin: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(50.0),
+                color: Colors.amber[100],
+                child: const Text("Two"),
+              ),
+              Container(
+                margin: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(50.0),
+                color: Colors.black38,
+                child: const Text("One"),
+              ),
+            ]),
       ),
     );
   }
 }
-//       body: const Row(
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: <Widget>[
-//           Icon(Icons.account_balance_wallet_rounded,
-//               size: 60.0, color: Colors.lightBlueAccent),
-//           Column(
-//             mainAxisAlignment: MainAxisAlignment.start,
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             children: [
-//               Text("Saldo",
-//                   style: TextStyle(
-//                     fontSize: 20.0,
-//                     fontFamily: "Poppins-SemiBold",
-//                   )),
-//               Text("Rp1000.000,-",
-//                   style: TextStyle(
-//                       fontSize: 15.0, fontFamily: "Poppins-SemiBold")),
-//             ],
-//           ),
-//           Container(),
-//         ],
-//       ),
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: () {
-//           print("You Click Me");
-//         },
-//         backgroundColor: Colors.green[800],
-//         child: const Text(
-//           "Click",
-//           style: TextStyle(
-//             fontSize: 15.0,
-//             fontFamily: "Poppins-SemiBold",
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
 
 /*
+  Row(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      const Icon(Icons.account_balance_wallet_rounded,
+          size: 60.0, color: Colors.lightBlueAccent),
+      const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Saldo",
+              style: TextStyle(
+                fontSize: 15.0,
+                fontFamily: "Poppins-SemiBold",
+              )),
+          Text("Rp1000.000,-",
+              style: TextStyle(
+                  fontSize: 15.0, fontFamily: "Poppins-SemiBold")),
+        ],
+      ),
+      Container(
+        color: Colors.cyan,
+        margin: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
+        child: const Text(
+          "Top Up",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 15.0,
+            fontFamily: "Poppins-SemiBold",
+          ),
+        ),
+      ),
+    ],
+  ),
+
+  ==========================
+
   Container(
   padding: const EdgeInsets.all(30.0),
   color: Colors.white70,
