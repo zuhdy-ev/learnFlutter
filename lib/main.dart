@@ -5,8 +5,15 @@ void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
     ));
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int level = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +33,21 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.white70,
         elevation: 0.0,
       ),
-      body: const Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            level += 1;
+          });
+        },
+        backgroundColor: Colors.green,
+        child: const Icon(Icons.add),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
+            const Expanded(
               flex: 1,
               child: Padding(
                 padding: EdgeInsets.fromLTRB(0, 8.0, 0, 0),
@@ -41,7 +57,7 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 20.0,
             ),
             Expanded(
@@ -49,38 +65,53 @@ class Home extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Zuhdi Ardi",
+                  const Text("Zuhdi Ardi",
                       style: TextStyle(
                         fontSize: 21.0,
                         fontFamily: "Poppins-SemiBold",
                       )),
-                  Text("ardhiekov@gmail.com",
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        fontFamily: "Poppins-Light",
-                      )),
-                  Text("628012341234",
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        fontFamily: "Poppins-Light",
-                      )),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.location_on,
-                        size: 15.0,
+                  Row(children: [
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(5.0, 0, 5.0, 0),
+                      alignment: Alignment.center,
+                      width: 50.0,
+                      height: 25.0,
+                      decoration: const BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.horizontal(
+                              left: Radius.circular(5))),
+                      child: const Text(
+                        "Level",
+                        style: TextStyle(
+                          fontSize: 12.0,
+                          fontFamily: "Poppins-SemiBold",
+                          color: Colors.white,
+                        ),
                       ),
-                      Text("Yogyakarta",
-                          style: TextStyle(
-                            fontSize: 15.0,
-                            fontFamily: "Poppins-Light",
-                          )),
-                    ],
-                  ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 5.0, 0),
+                      alignment: Alignment.center,
+                      width: 20.0,
+                      height: 25.0,
+                      decoration: const BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.horizontal(
+                              right: Radius.circular(5))),
+                      child: Text(
+                        '$level',
+                        style: const TextStyle(
+                          fontSize: 12.0,
+                          fontFamily: "Poppins-SemiBold",
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ]),
                 ],
               ),
             ),
-            Expanded(
+            const Expanded(
               flex: 1,
               child: Padding(
                 padding: EdgeInsets.fromLTRB(0, 2.0, 0, 0),
